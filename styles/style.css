@@ -1,0 +1,718 @@
+/*
+    >>> Trabalho Semestral: E-commerce;
+    Projeto: Rad Buttons;
+    Orientadores: Jovita Mercedes, Rodrigo Ferreira e Victor De Assis Rodrigues;
+    Desenvolvedores: Alcindo Padilha, Eduardo Rosalem, Gabriel Tavares, Rubens Montalvao, Vinicius Rosa;
+    Data de criação: 25/08/2021;
+    Data da última atualização: 14/09/2021.
+    Copyright © 2021 Rad Buttons®
+*/
+
+/*=========================== Raiz ==============================*/
+
+/* É o seletor que corresponde ao elemento raiz do documento. */
+:root {
+    /* Cores: */
+    --thistle: #E7DBEA;
+    --light-mushroom: #EFEBE8;
+    --off-black: #1D1D1B;
+    --off-white: #EDEDED;
+    --dark-mushroom: #B5ABA9;
+    --navy: #415D95;
+    --tan: #ECDDC8;
+    --vermillion: #ED685C;
+    --sky: #CBE2EA;
+    --pink: #F4C6C6;
+    --moss: #6B9856;
+    --lemon: #F1E967;
+}
+
+/*============================ Fontes ============================*/
+
+/* Asap Regular */
+@font-face {
+    src: url(../fonts/asap_regular.ttf) format("truetype");
+    font-family: asap;
+}
+
+/* Asap Semi-Bold */
+@font-face {
+    font-family: "asap semi-bold";
+    src: url(../fonts/asap_semibold.ttf) format("truetype");
+}
+
+/* Asap Semi-Bold Italic */
+@font-face {
+    font-family: "asap semi-bold italic";
+    src: url(../fonts/asap_semibold_italic.ttf) format("truetype");
+}
+
+/* Asap Bold */
+@font-face {
+    font-family: "asap bold";
+    src: url(../fonts/asap_bold.ttf) format("truetype");
+}
+
+/*====================== Seletor Universal ======================*/
+
+* {
+    /* Utilizada para alterar a propriedade padrão da box model. */
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/*========================= HTML ================================*/
+
+/* Utilizado para dar o efeito de rolagem do retornar ao topo. */
+html {
+    scroll-behavior: smooth;
+}
+
+/*========================= Principal ==========================*/
+
+/* A div principal. */
+#main {
+    width: 1200px;
+    background-color: var(--light-mushroom);
+}
+
+/*========================= Cabeçalho ==========================*/
+
+/* É o cabeçalho da página. */
+.header {
+    overflow: hidden;
+    background-color: var(--light-mushroom);
+    padding: 2px 10px;
+    border-bottom: 1px solid;
+    border-color: var(--thistle);
+}
+  
+/* Parte esquerda do cabeçalho. */
+.header-left {
+    float: left;
+    margin-top: 25px;
+    margin-left: 80px;
+}    
+
+/* Parte direita do cabeçalho. */
+.header-right {
+    float: right;
+    margin-top: 17px;
+}
+  
+/* Executa essas funções enquanto a largura for menor ou igual a 500 pixels. */
+@media screen and (max-width: 500px) {
+    .header a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    
+    .header-left {
+      float: none;
+    }
+  
+    .header-right {
+      float: none;
+    }
+}
+  
+/*==================== Barra de navegação =====================*/
+
+.logo {
+    float: left;
+    width: 99px;
+    height: 70px;
+}
+
+a.nav_link:link, a.nav_link:visited {
+    font-family: "asap semi-bold";
+    color: var(--off-black);
+    float: none;
+    text-align: center;
+    padding: 8px 18px;
+    text-decoration: none;
+    font-size: 18px; 
+    border-radius: 40px;
+    border: 0px solid;
+    border-color: var(--off-black);
+    transition: 0.3s;
+}
+  
+a.nav_link:hover, a.nav_link:active {
+    color: var(--light-mushroom) !important;
+    background-color: var(--dark-mushroom);
+}
+  
+a.cadastro_button:link, a.cadastro_button:visited {
+    font-family: "asap semi-bold";
+    color: var(--off-black);
+    float: left;
+    text-align: center;
+    padding: 6px 18px;
+    text-decoration: none;
+    font-size: 18px; 
+    border-radius: 40px;
+    border: 2px solid;
+    border-color: var(--off-black);
+    transition: 0.3s;
+    margin-right: 8px;
+}    
+  
+a.cadastro_button:hover, a.cadastro_button:active {
+    color: var(--light-mushroom);
+    background-color: var(--dark-mushroom);
+}
+  
+a.login_button:link, a.login_button:visited {
+    font-family: "asap semi-bold";
+    color: var(--light-mushroom);
+    float: left;
+    background-color: var(--off-black);
+    text-align: center;
+    padding: 6px 18px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px; 
+    border-radius: 40px;
+    border: 2px solid;
+    border-color: var(--off-black);
+    transition: 0.3s;
+    margin-right: 18px;
+}
+  
+a.login_button:hover, a.login_button:active {
+    color: var(--light-mushroom);
+    background-color: var(--dark-mushroom);
+}
+ 
+/* Configurações do ícone do carrinho. */
+.carrinho {
+    color: var(--off-black);
+    float: left;
+    padding: 8px;
+    transition: 0.3s;
+    margin-right: 12px;
+}
+  
+.carrinho:hover {
+    color: var(--dark-mushroom);
+}
+
+/* Configurações do ícone do olhinho. */
+.olhinho {
+    color: var(--off-black);
+    float: right;
+    padding: 8px;
+    transition: 0.3s;
+    margin-right: 12px;
+    margin-top: 1px;
+}
+  
+.olhinho:hover {
+    color: var(--dark-mushroom);
+    cursor: pointer;
+}
+
+/*========================== Corpo ===========================*/
+
+/* Corpo do programa. */
+body {
+    background-color: var(--light-mushroom);
+    font-family: asap;
+}
+
+/*======================== Camadas ==========================*/
+
+/* A camada do ponto primário, onde ficam as imagens e textos principais. */
+#ponto_primario {
+    width: 1200px;
+    display: inline-flex;
+    background-color: var(--light-mushroom);
+    padding-bottom: 15px;
+    
+}
+
+/* Camada designada para dividir os espaços do texto e imagem principal. */
+#container_texto_principal {
+    width: 500px;
+    background-color: var(--light-mushroom);
+    float: left;
+    height: 550px;
+}
+
+/* Camada que irá armazenar a imagem principal. */
+#container_imagem_principal {
+    width: 700px;
+    background-color: var(--light-mushroom);
+    float: left;
+    height: 550px;
+    
+}
+
+/* Configurações da imagem principal. */
+#container_imagem_principal > img {
+    background-color: var(--light-mushroom);
+    margin-top: 30px;
+    animation-name: transition;
+    animation-duration: 2.5s;
+}
+
+/* A caixa de texto superior do texto principal. */
+#textbox_superior {
+    margin-left: 8px;
+    margin-top: 180px;
+    float: left;
+    width: 70%;
+    height: 52px;
+    background-color: #FFFFFF;
+    transform: matrix(1, -0.03, 0.03, 1, 0, 0) !important;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 3px;
+    animation-name: transition;
+    animation-duration: 2.5s;
+}
+
+/* A caixa de texto inferior do texto principal. */
+#textbox_inferior {
+    margin-left: 8px;
+    margin-top: 14px;
+    float: left;
+    width: 100%;
+    height: 52px;
+    background-color: #FFFFFF;
+    border-radius: 3px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    box-shadow: 0px 3px 6px #00000029;
+    animation-name: transition;
+    animation-duration: 2.5s;
+}
+
+/* Formatação de texto do elemento h1, na caixa de texto superior. */
+#textbox_superior > h1 {
+    margin: 0px;
+    margin-top: 8px;
+    font-size: 32px;
+    text-align: center;
+    color: var(--off-black);
+    font-family:"asap bold";
+}
+
+/* Formatação de texto do elemento h1, na caixa de texto inferior. */
+#textbox_inferior > h1 {
+    margin: 0px;
+    margin-top: 3px;
+    font-size: 32px;
+    text-align: center;
+    color: var(--off-black);
+    font-family: "asap bold";
+}
+
+/* Formatação de texto do elemento h2, na caixa de texto inferior. */
+#textbox_inferior > h2 {
+    margin: 0px;
+    margin-top: 10px;
+    font-size: 16px;
+    text-align: justify;
+    color: var(--off-black);
+    font-family: "asap semi-bold";
+}
+
+/* Formatação de texto do elemento p, na caixa de texto inferior. */
+#textbox_inferior > p {
+    margin-top: 10px;
+    font-size: 16px;
+    text-align: left;
+    color: var(--off-black);
+    font-family: asap;
+}
+
+/* Animação do surgir. */
+@keyframes transition {
+    from {opacity:0;}
+    to {opacity:1;}
+}
+
+/* Div total das 3 imagens e suas descrições. */
+#ponto_secundario {
+    display: inline-block;
+    width: 1200px;
+    background-color: var(--off-black);
+}
+
+/* Título da div das imagens secundárias */
+#ponto_secundario > h1 {
+    display: block;
+    margin-top: 16px;
+    font-family: "asap semi-bold italic";
+    font-size: 50px;
+    color: var(--light-mushroom);
+}
+
+/* Div que envolve as divisões internas dos textos e imagens secundárias. */
+#texto_imagem {
+    float: left;
+    width: 400px;
+    background-color: var(--off-black);
+}
+
+/* Div usada para armazenar as imagens dos buttons */
+#container_button {
+    float: left;
+    width: 400px;
+}
+
+/* Margem utilizado nas imagens dos bottons do ponto secundário. */
+#container_button > img {
+    margin-top: 64px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#container_button > img:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+  
+/* Caption of Modal Image */
+#caption1, #caption2, #caption3 {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+  
+/* Add Animation */
+.modal-content, #caption1, #caption2, #caption3 {  
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+  
+@keyframes zoom {
+    from {transform: scale(0.1)} 
+    to {transform: scale(1)}
+}
+  
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+  
+.close:hover, 
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+  
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+    .modal-content {
+      width: 100%;
+    }
+}
+
+/* Espaço designado para a descrição das imagens secundárias. */
+#container_texto {
+    float: left;
+    width: 400px;
+}
+
+/* Formatação do título das imagens secundárias. */
+#container_texto > h1 {
+    text-align: center;
+    font-family: "asap bold";
+    font-size: 25px;
+    color: #FFFFFF;
+}
+
+/* Formatação da descrição dessa imagem secundária. */
+#container_texto > p {
+    text-align: center;
+    font-family: asap;
+    font-size: 16px;
+    color: var(--light-mushroom);
+}
+
+/* Elemento de armazenamento das divs de prancheta e vídeo. */
+#ponto_terciario {
+    padding-bottom: 38px;
+    padding-top: 100px;
+    width: 1200px;
+    background-color: var(--off-black);
+    display: inline-flex;
+}
+
+/* Div da prancheta explicativa do vídeo da página home. */
+#container_prancheta {
+    float: left;
+    width: 400px;
+    background-color: var(--off-black);
+}
+
+/* Div do vídeo de apresentação do produto da página home. */
+#container_video {
+    float: left;
+    width: 800px;
+    background-color: var(--off-black);
+}
+
+/* Div utilizada como a camada que armazena a divs de texto e imagens, da página do desenvolvimento. */
+#devs_geral {
+    width: 1200px;
+    padding-top: 50px;
+    display: flow-root;
+}
+
+/* Div utilizada para armazenar o texto da página dos devs, ou seja, o sobre nós. */
+#devs_texto {
+    width: 1200px;
+    height: auto;
+    animation-name: transition;
+    animation-duration: 2.4s;
+}
+
+#devs_texto > h1 {
+    text-align: center;
+    font-family: "asap bold";
+    font-size: 25px;
+    color: var(--off-black);
+}
+
+#devs_texto > p {
+    text-align: justify;
+    font-family: asap;
+    font-size: 16px;
+    color: var(--off-black);
+}
+
+/* Div utilizada para armazenar as camadas internas das fotos dos desenvolvedores. */
+#devs_imagens {
+    width: 1200px;
+    padding-top: 75px;
+    display: inline-block;
+    animation-name: transition;
+    animation-duration: 2.4s;
+}
+
+#devs_imagens > h1 {
+    text-align: center;
+    font-family: "asap bold";
+    font-size: 25px;
+    color: var(--off-black);
+}
+
+/* Camadas internas, onde devem ficar as fotos dos desenvolvedores. */
+#fotos_desenvolvedores {
+    width: 240px;
+    height: auto;
+    float: left;
+}
+
+#fotos_desenvolvedores > h2 {
+    text-align: center;
+    font-family: "asap bold";
+    font-size: 20px;
+    color: var(--off-black);
+}
+
+#fotos_desenvolvedores > p {
+    text-align: center;
+    font-family: asap;
+    font-size: 20px;
+    color: var(--off-black);
+}
+
+/*======================== Botões ===========================*/
+
+/* Botão interativo com animação da home, do ponto principal. */
+a.button_produto {
+    font-size: 16px;
+    font-family: "asap semi-bold";
+    color: var(--light-mushroom);
+    background-color: var(--off-black);
+    text-decoration: none;
+    padding: 3px 18px;
+    border-radius: 40px;
+    border: 2px solid;
+    border-color: var(--off-black);
+    transition: 0.3s;
+    margin-left: 6px;
+}
+
+a.button_produto span {
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+  
+a.button_produto span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+  
+a.button_produto:hover span {
+    padding-right: 20px;
+}
+  
+a.button_produto:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+/*======================== Rodapé ===========================*/
+
+/* Classe do rodapé da página. */
+.footer {
+    padding-bottom: 15px;
+    margin-top: 25px;
+    width: 1200px;
+    background-color: var(--light-mushroom);
+}
+
+/* Configurações do parágrafo do rodapé. */
+.footer > p {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 16px;
+    font-family: asap;
+    padding: 6px 12px;
+    text-align: center;
+}
+
+a.link_rodape:link, a.link_rodape:visited {
+    font-size: 16px;
+    font-family: "asap semi-bold";
+    color: var(--off-black);
+    background-color: var(--light-mushroom);
+    text-align: center;
+    padding: 8px 18px;
+    text-decoration: none;
+    border: none;
+    transition: 0.3s;
+}
+
+a.link_rodape:hover, a.link_rodape:active {
+    background-color: var(--light-mushroom);
+    color: var(--dark-mushroom);
+    text-decoration: none;
+}
+
+/* Configurações da âncora de voltar ao topo. */
+.voltar_topo {
+    color: var(--off-black);
+    float: right;
+    transition: 0.3s;
+}
+  
+.voltar_topo:hover {
+    color: var(--dark-mushroom);
+}
+
+/* Configuração do ícone de voltar ao topo. */
+.material-icons-outlined {
+    font-size: 22px !important;
+}
+
+.footer_alternativo {
+    padding-top: 18px;
+    padding-bottom: 15px;
+    margin-top: 25px;
+    width: 1200px;
+    background-color: var(--off-black);
+}
+
+/* Configurações do parágrafo do rodapé alternativo. */
+.footer_alternativo > p {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 16px;
+    font-family: asap;
+    padding: 6px 12px;
+    text-align: center;
+    color: var(--light-mushroom);
+}
+
+a.link_rodape_alternativo:link, a.link_rodape_alternativo:visited {
+    font-size: 16px;
+    font-family: "asap semi-bold";
+    color: var(--light-mushroom);
+    background-color: var(--off-black);
+    text-align: center;
+    padding: 8px 18px;
+    text-decoration: none;
+    border: none;
+    transition: 0.3s;
+}
+
+a.link_rodape_alternativo:hover, a.link_rodape_alternativo:active {
+    background-color: var(--off-black);
+    color: var(--dark-mushroom);
+    text-decoration: none;
+}
+
+/* Configurações da âncora de voltar ao topo. */
+.voltar_topo_alternativo {
+    color: var(--light-mushroom);
+    float: right;
+    transition: 0.3s;
+}
+  
+.voltar_topo_alternativo:hover {
+    color: var(--dark-mushroom);
+}
+
+/*
+
+Só o Pikachu mesmo...
+
+⣿⣿⣿⣿⣿⡏⠉⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣿
+⣿⣿⣿⣿⣿⣿⠀⠀⠀⠈⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛⠉⠁⠀⣿
+⣿⣿⣿⣿⣿⣿⣧⡀⠀⠀⠀⠀⠙⠿⠿⠿⠻⠿⠿⠟⠿⠛⠉⠀⠀⠀⠀⠀⣸⣿
+⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⣴⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⡟⠀⠀⢰⣹⡆⠀⠀⠀⠀⠀⠀⣭⣷⠀⠀⠀⠸⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠈⠉⠀⠀⠤⠄⠀⠀⠀⠉⠁⠀⠀⠀⠀⢿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⢾⣿⣷⠀⠀⠀⠀⡠⠤⢄⠀⠀⠀⠠⣿⣿⣷⠀⢸⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⡀⠉⠀⠀⠀⠀⠀⢄⠀⢀⠀⠀⠀⠀⠉⠉⠁⠀⠀⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿
+
+
+*/
+
+/*==========================================================*/

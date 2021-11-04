@@ -1,0 +1,221 @@
+<!--
+    >>> Trabalho Semestral: E-commerce;
+    Projeto: Rad Buttons;
+    Orientadores: Jovita Mercedes, Rodrigo Ferreira e Victor De Assis Rodrigues;
+    Desenvolvedores: Alcindo Padilha, Eduardo Rosalem, Gabriel Tavares, Rubens Montalvao, Vinicius Rosa;
+    Data de criação: 25/08/2021;
+    Data da última atualização: 14/09/2021.
+    Copyright © 2021 Rad Buttons®
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"> <!-- Especifica a codificação de caracteres para o documento HTML. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Isso fornece ao navegador instruções sobre como controlar as dimensões e a escala da página. -->
+    <meta name="description" content="A Rad Buttons é uma empresa que possui excelência na produção de buttons personalizados">
+    <meta name="keywords" content="Buttons, botons, bottons, personalizados">
+    <meta name="author" content="Alcindo Padilha, Eduardo Rosalem, Gabriel Tavares, Rubens Montalvao, Vinicius Rosa">
+    <link rel="stylesheet" type="text/css" href="styles/style.css"> <!-- Adiciona o CSS por um arquivo externo. -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> <!-- Adiciona ícones para serem usados na barra de navegação. -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"> <!-- Adiciona um ícone de seta (utilizado para ser a âncora de voltar ao topo) e de brilho (solzinho). -->
+    <title>Rad Buttons</title>
+</head>
+<body>
+    <center>
+        <!-- Início da div principal. -->
+        <div id="main">
+            <!-- Lugar que o usuário vai ser levado quando pressionar o botão de retornar ao topo. -->
+            <a name="topo"></a>
+            <!-- Início do div cabeçalho. -->
+            <div class="header">
+                <a href="index.html" class="logo"><img src="images/logo.png" width="99px" height="70px" alt="logomarca"></a>
+                <!-- Início da parte esquerda do cabeçalho. -->
+                <div class="header-left">
+                    <a id="home_nav_id" class="nav_link" href="index.html">Home</a>
+                    <a id="produtos_nav_id" class="nav_link" href="produtos.html">Produtos</a>
+                    <a id="desenvolvedores_nav_id" class="nav_link" href="desenvolvedores.html">Desenvolvedores</a>
+                    <a id="estatísticas_nav_id" class="nav_link" href="estatisticas.html">Estatísticas</a>
+                </div>
+                <!-- Fim da parte esquerda do cabeçalho. -->
+                <!-- Início da parte direita do cabeçalho. -->
+                <div class="header-right">
+                    <a id="cadastro_nav_id" class="cadastro_button" href="cadastro.html">Cadastro</a>
+                    <a id="login_nav_id" class="login_button" href="login.html">Login</a>
+                    <a id="shopping_cart_nav_id" class="carrinho" href="carrinho.html">
+                      <span class="material-icons">
+                        shopping_cart
+                      </span>
+                    </a>
+                    <a id="color_blind_id" class="olhinho" >
+                        <span class="material-icons-outlined">
+                            visibility
+                        </span>
+                    </a>
+                </div>
+                <!-- Fim da parte direita do cabeçalho. -->
+            </div>
+            <!-- Fim do div cabeçalho. -->
+            <!-- Início do ponto primário. -->
+            <div id="ponto_primario">
+                <!-- Início da div do texto principal. -->
+                <div id="container_texto_principal">
+                    <div id="textbox_superior">
+                        <h1>Bem-vinde à home</h1>
+                    </div>
+                    <div id="textbox_inferior">
+                        <h1>Você irá se apaixonar! ❤</h1>
+                        <br>
+                        <h2>
+                            A Rad Buttons é uma empresa com excelência na produção de buttons personalizados, contamos com equipamentos e materiais de alta qualidade.
+                        </h2>
+                        <br>
+                        <p>Conheça nossos <a href="produtos.html" class="button_produto"><span>produtos</span></a></p>
+                    </div>
+                </div>
+                <!-- Fim da div do texto principal. -->
+                <!-- Início da div da imagem principal. -->
+                <div id="container_imagem_principal" >
+                    <img src="images/composicao_inicio.png" width="509px" height="515px" alt="mulher usando uma jaqueta, ao lado temos uma bolsa com bottons personalizados, seguido de um ícone de uma boca kiss. Logo abaixo, temos um botton azul escrito RAD no centro.">
+                </div>
+                <!-- Fim da div da imagem principal. -->
+            </div>    
+            <!-- Fim do ponto primário. -->
+            <!-- Início do ponto secundário. -->
+            <div id="ponto_secundario">
+                <h1>POR QUE USAR RAD?</h1>
+                <br>
+                <!------------------------------------------------------->
+                <!-- Início da div do texto + imagem (secundários). -->
+                <div id="texto_imagem">
+                    <!-- Início da div interna da imagem. -->
+                    <div id="container_button">
+                        <img id="myImg1" src="images/button_amarelo.png" width="200px" height="200px" alt="Um button com uma estampa amarela.">
+                    </div>
+                    <!-- The Modal -->
+                    <div id="myModal1" class="modal">
+                        <span class="close">&times;</span>
+                        <img class="modal-content" id="img01">
+                        <div id="caption1"></div>
+                    </div>
+                    <!-- Fim da div interna da imagem. -->
+                    <!-- Início da div interna do texto. -->
+                    <div id="container_texto">
+                        <h1>Para todos os moods</h1>
+                        <br>
+                        <p>
+                            Diversas personalizações para agradar você...
+                            <br><br><br>
+                        </p>
+                    </div>
+                    <!-- Fim da div interna do texto. -->
+                </div>
+                <!-- Fim da div do texto + imagem (secundários). -->
+                <!------------------------------------------------------->
+                <!-- Início da div do texto + imagem (secundários). -->
+                <div id="texto_imagem">
+                    <!-- Início da div interna da imagem. -->
+                    <div id="container_button">
+                        <img id="myImg2" src="images/button_azul.png" width="200px" height="200px" alt="Um button com uma estampa azul e branca.">
+                    </div>
+                    <!-- The Modal -->
+                    <div id="myModal2" class="modal">
+                        <span class="close">&times;</span>
+                        <img class="modal-content" id="img02">
+                        <div id="caption2"></div>
+                    </div>
+                    <!-- Fim da div interna da imagem. -->
+                    <!-- Início da div interna do texto. -->
+                    <div id="container_texto">
+                        <h1>Arte com personalidade</h1>
+                        <br>
+                        <p>
+                            Aqui você encontra bottons colecionáveis
+                            <br>
+                            para sua mochila, cordão de crachá, jaqueta
+                            <br>
+                            e muito mais...
+                        </p>
+                    </div>
+                    <!-- Fim da div interna do texto. -->
+                </div>
+                <!-- Fim da div do texto + imagem (secundários). -->
+                <!------------------------------------------------------->
+                <!-- Início da div do texto + imagem (secundários). -->
+                <div id="texto_imagem">
+                    <!-- Início da div interna da imagem. -->
+                    <div id="container_button">
+                        <img id="myImg3" src="images/button_verde.png" width="200px" height="200px" alt="Um button com uma estampa verde, está escrito RAD no centro.">
+                    </div>
+                    <!-- The Modal -->
+                    <div id="myModal3" class="modal">
+                        <span class="close">&times;</span>
+                        <img class="modal-content" id="img03">
+                        <div id="caption3"></div>
+                    </div>
+                    <!-- Fim da div interna da imagem. -->
+                    <!-- Início da div interna do texto. -->
+                    <div id="container_texto">
+                        <h1>Entrega internacional</h1>
+                        <br>
+                        <p>
+                            Sempre visando ser referência no mercado,
+                            <br>
+                            quando o assunto é qualidade e agilidade...
+                            <br><br>
+                        </p>
+                    </div>
+                    <!-- Fim da div interna do texto. -->
+                </div>
+                <!-- Fim da div do texto + imagem (secundários). -->
+                <!------------------------------------------------------->
+            </div>
+            <!-- Fim do ponto secundário. -->
+            <!-- Início da div do ponto terciário. -->
+            <div id="ponto_terciario">
+                <!-- Início da div da prancheta do vídeo. -->
+                <div id="container_prancheta">
+                    <img src="images/prancheta_video.png" width="307px" height="363px" alt="Uma prancheta, que tem no seu interior a seguinte frase: Entenda como funciona. O vídeo ao lado demonstra o funcionamento do site.">
+                </div>
+                <!-- Fim da div da prancheta do vídeo. -->
+                <!-- Início da div do vídeo. -->
+                <div id="container_video">
+                    <iframe src="https://player.vimeo.com/video/593070731?h=aa1b9edf8f&autoplay=1&loop=1&title=0&byline=0&portrait=0?autoplay=1&loop=1&autopause=0&muted=1" width="800px" height="363px" name="filme_home" frameborder="0" scrolling="no" allow="autoplay; fullscreen; picture-in-picture"></iframe>
+                </div>
+                <!-- Fim da div do vídeo. -->
+            </div>
+            <!-- Fim da div do ponto terciário. -->
+            <!-- Início da div do rodapé. -->
+            <div class="footer">
+                <a id="home_foot_id" class="link_rodape" href="index.html">Home</a>
+                <a id="produtos_foot_id" class="link_rodape" href="produtos.html">Produtos</a>
+                <a id="desenvolvedores_foot_id" class="link_rodape" href="desenvolvedores.html">Desenvolvedores</a>
+                <a id="estatísticas_foot_id" class="link_rodape" href="estatisticas.html">Estatísticas</a>
+                <a class="voltar_topo" href="#topo">
+                    <span class="material-icons-outlined">
+                        arrow_circle_up
+                    </span>
+                </a>
+                <br>
+                <p>Alcindo Padilha - 01</p>
+                <p>Eduardo Rosalem - 04</p>
+                <p>Gabriel Tavares - 06</p>
+                <p>Rubens Montalvao - 29</p>
+                <p>Vinicius Rosa - 34</p>
+            </div>
+            <!-- Fim da div do rodapé. -->
+        </div>
+        <!-- Fim da div principal. -->
+    </center>
+    <script type="text/javascript" src="scripts/script_functions.js"></script>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</body>
+</html>
