@@ -1,2 +1,2 @@
-# Rad-buttons
-E-commerce desenvolvido durante o curso, uma empresa relacionada com produções e vendas de buttons personalizados.
+# Rad Buttons
+E-commerce desenvolvido durante o curso de informática do CTI. É uma empresa relacionada com a produções e vendas de buttons personalizados.
